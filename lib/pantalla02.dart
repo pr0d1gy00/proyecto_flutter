@@ -67,7 +67,7 @@ if (apiIp == null) {
       throw Exception('IP address is invalid');
     }
     try {
-      final response = await http.get(Uri.parse('http://localhost:8080/api/v1/products'));
+      final response = await http.get(Uri.parse('http://$apiIp:8080/api/v1/products'));
       if (response.statusCode == 200) {
         setState(() {
           _connectionStatus = "conexión OK";
@@ -185,8 +185,8 @@ if (apiIp == null) {
                                       stockmax:product.stockmax,
                                       stockmin:product.stockmin,
                                       precio:product.precio,
-                                      codcat:product.codcat
-
+                                      codcat:product.codcat,
+                                      apiIp: apiIp
                                     ),
                                   ));
                               },

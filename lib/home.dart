@@ -30,8 +30,12 @@ class MyHomePage extends StatefulWidget {
 
 class _HomeState extends State<MyHomePage> {
   //variables
+  
   @override
   Widget build(BuildContext context) {
+    DateTime now = DateTime.now();
+
+    // Formatea la fecha y hora
     return Scaffold(
       drawer: const MenuLateral(),
       appBar: AppBar(
@@ -55,6 +59,18 @@ class _HomeState extends State<MyHomePage> {
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
+                ),
+                Text(
+                    now.toString()
+                ),
+                const Text(
+                  'Integrantes : Carlos mendoza, '
+                  'Joselyn Aponte, '
+                  'Angel Rodriguez, '
+                  'Moises Reyes, '
+                  'Mauricio Alvarez, '
+                  'Daniela Sivira, '
+                  
                 ),
                 const SizedBox(
                   height: 20,
